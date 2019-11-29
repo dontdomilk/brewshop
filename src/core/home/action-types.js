@@ -1,0 +1,1 @@
+export const GET_BEERS_SUCCESS = 'HOME@GET_BEERS_SUCCESS';

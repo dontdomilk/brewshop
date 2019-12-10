@@ -1,0 +1,13 @@
+@import "../../common/styles/colors";
+@import "../../common/styles/sizes";
+
+main {
+  div.main-wrapper {
+    display: flex;
+    min-height: calc(100vh - #{$header-height});
+    div.content {
+      background-color: $copper;
+      flex-basis: 80vw;
+    }
+  }
+}

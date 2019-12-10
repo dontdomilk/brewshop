@@ -1,0 +1,35 @@
+@import '../../common/styles/colors';
+@import "../../common/styles/sizes";
+
+aside.side-menu {
+  flex-basis: 20vw;
+  background-color: $cream;
+  padding: 20px;
+  div.side-menu-link {
+    padding: 15px;
+    position: relative;
+    &:not(:last-child) {
+      &:after {
+        content: '';
+        width: calc(100% - 33%);
+        background-color: $light-brown;
+        height: 1px;
+        position: absolute;
+        left: calc(33% / 2);
+        bottom: 0;
+        display: block;
+      }
+    }
+    a {
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: 600;
+      color: $mocha;
+      transition: color $transition-style;
+    }
+    a.active-link {
+      transition: color $transition-style;
+      color: $copper;
+    }
+  }
+}

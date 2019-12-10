@@ -1,0 +1,16 @@
+@import '../../common/styles/colors';
+
+div.card {
+  padding: 15px 15px 15px 10px;
+  flex-basis: 25%;
+  background-color: $mocha;
+  color: $cream;
+  border-radius: 10px;
+  div.img-wrapper {
+    width: 100%;
+    img {
+      height: 200px;
+      max-width: 100%;
+    }
+  }
+}

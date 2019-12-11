@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Card from '../../components/card';
+import HomepageContainer from '../../core/home';
 import './style.scss';
 
 const temp = [
@@ -26,13 +27,20 @@ const temp = [
     }
 ]
 
-const Home = (props) => {
+const HomeGUI = (props) => {
+
+    const {beers} = props;
+    console.log(props)
+    useEffect(() => {
+        props.getBeers();
+    },[]);
 
     return (
         <div className="home-content-wrapper">
             <div className="card-wrapper">
-                {temp.map((item, i) => (
+                {beers && beers.map((item, i) => (
                     <Card
+                        key={`beer-card-${i}`}
                         {...item}
                     />
                 ))}
@@ -42,4 +50,4 @@ const Home = (props) => {
     )
 }
 
-export default Home;
+export default HomepageContainer(HomeGUI);

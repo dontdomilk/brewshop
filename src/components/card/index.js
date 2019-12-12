@@ -1,10 +1,12 @@
 import React from 'react';
 import './style.scss';
 
-const Card = ({name, firstBrewed, description, imageUrl, foodPairing}) => {
+const Card = ({name, firstBrewed, description, imageUrl, foodPairing, id, onClick}) => {
+
+    const handleClick = () => onClick(id);
 
     return (
-        <div className="card">
+        <div className="card" onClick={handleClick}>
             <div className="img-wrapper">
                 <img src={imageUrl} alt=""/>
             </div>

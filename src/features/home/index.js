@@ -1,6 +1,7 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Card from '../../components/card';
 import HomepageContainer from '../../core/home';
+import BeerCardModal from '../../components/modal/beer-card';
 import './style.scss';
 
 const temp = [
@@ -27,9 +28,31 @@ const temp = [
     }
 ]
 
+
 const HomeGUI = (props) => {
 
     const {beers} = props;
+
+    const [modal, setModal] = useState({
+        open: false,
+        data: {
+            name: ''
+        }
+    })
+
+    const onCardClick = (id) => {
+
+        const data = props.beers.find(i => i.id === id);
+
+        setModal({
+            ...modal,
+            open: true,
+            data
+        })
+
+    }
+
+    const toggleModal = () => setModal({...modal, open: !modal.open})
 
     useEffect(() => {
         props.getBeers();
@@ -40,11 +63,16 @@ const HomeGUI = (props) => {
             <div className="card-wrapper">
                 {beers && beers.map((item, i) => (
                     <Card
+                        onClick={onCardClick}
                         key={`beer-card-${i}`}
                         {...item}
                     />
                 ))}
-
+                {<BeerCardModal
+                    toggle={toggleModal}
+                    open={modal.open}
+                    data={modal.data}
+                />}
             </div>
         </div>
     )

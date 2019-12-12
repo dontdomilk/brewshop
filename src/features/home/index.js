@@ -30,7 +30,7 @@ const temp = [
 const HomeGUI = (props) => {
 
     const {beers} = props;
-    console.log(props)
+
     useEffect(() => {
         props.getBeers();
     },[]);

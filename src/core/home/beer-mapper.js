@@ -6,7 +6,7 @@ class SingleBeerMapper {
         firstBrewed: payload.first_brewed,
         foodPairing: payload.food_pairing.join(', '),
         description: payload.description,
-        imageURL: payload.image_url
+        imageUrl: payload.image_url
     })
 }
 

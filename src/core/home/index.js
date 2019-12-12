@@ -6,17 +6,26 @@ import * as selectors from './selectors';
 
 export default (HomepageGUI) => {
 
-    const beers = useSelector(state => state.beers)
-    const dispatch = useDispatch()
+    const mapDispatchToProps = (dispatch) => ({
+        getBeers: (params) => dispatch(actions.getBeers(params))
+    })
 
-    const getBeers = (params) => dispatch(actions.getBeers(params));
 
-    return (
+
+    const mapStateToProps = (state) => ({
+        beers: selectors.selectBeers(state)
+    })
+
+
+
+    const HomepageWrapper = (props) => (
         <HomepageGUI
-            getBeers={getBeers}
-            beers={beers}
+            getBeers={props.getBeers}
+            beers={props.beers}
         />
     )
 
+    return connect(mapStateToProps, mapDispatchToProps)(HomepageWrapper);
 }
+
 

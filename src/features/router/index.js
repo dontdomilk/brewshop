@@ -5,7 +5,7 @@ import Routes from './routes';
 import {withRouter} from 'react-router-dom';
 
 const AppRouter = (props) => {
-    console.log(Routes);
+
     return (
         <Switch>
             {

@@ -2,6 +2,7 @@ import React from 'react';
 import './style.scss';
 
 const Card = ({name, firstBrewed, description, imageUrl, foodPairing}) => {
+
     return (
         <div className="card">
             <div className="img-wrapper">
@@ -11,7 +12,7 @@ const Card = ({name, firstBrewed, description, imageUrl, foodPairing}) => {
                 <div className="name">{name}</div>
                 <div className="date">{firstBrewed}</div>
                 <p className="description">{description}</p>
-                <div className="pairing">{foodPairing.join(', ')}</div>
+                <div className="pairing">{foodPairing}</div>
             </div>
         </div>
     )

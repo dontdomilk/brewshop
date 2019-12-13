@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/brewshop/static/css/main.fecf5e22.chunk.css",
+    "main.js": "/brewshop/static/js/main.462957e0.chunk.js",
+    "main.js.map": "/brewshop/static/js/main.462957e0.chunk.js.map",
+    "runtime-main.js": "/brewshop/static/js/runtime-main.764333d6.js",
+    "runtime-main.js.map": "/brewshop/static/js/runtime-main.764333d6.js.map",
+    "static/js/2.394d677a.chunk.js": "/brewshop/static/js/2.394d677a.chunk.js",
+    "static/js/2.394d677a.chunk.js.map": "/brewshop/static/js/2.394d677a.chunk.js.map",
+    "index.html": "/brewshop/index.html",
+    "precache-manifest.2f6acba78be285b4f29f6febd4358775.js": "/brewshop/precache-manifest.2f6acba78be285b4f29f6febd4358775.js",
+    "service-worker.js": "/brewshop/service-worker.js",
+    "static/css/main.fecf5e22.chunk.css.map": "/brewshop/static/css/main.fecf5e22.chunk.css.map",
+    "static/js/2.394d677a.chunk.js.LICENSE": "/brewshop/static/js/2.394d677a.chunk.js.LICENSE",
+    "static/media/logo.svg": "/brewshop/static/media/logo.25bf045c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.764333d6.js",
+    "static/js/2.394d677a.chunk.js",
+    "static/css/main.fecf5e22.chunk.css",
+    "static/js/main.462957e0.chunk.js"
+  ]
+}

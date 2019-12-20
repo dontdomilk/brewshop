@@ -21,7 +21,8 @@ const Modal = ({children, type, id, open, toggle}) => {
 
         const handleToggle = () => {
             setOpen(!isOpen);
-            toggle();
+            setTimeout(() => toggle(), 500)
+            // toggle();
         };
 
         return (

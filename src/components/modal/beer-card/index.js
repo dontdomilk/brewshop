@@ -3,10 +3,14 @@ import Modal from '../index.js';
 
 
 const BeerCardModal = (props) => {
-    console.log(props)
+    console.log(props.data)
+
+    const {data} = props;
+    const {basic, recipe} = data;
+
     return (
         <Modal open={props.open} toggle={props.toggle} >
-            <div className="name">{props.data.name}</div>
+            <div className="name">{basic.name}</div>
         </Modal>
     )
 }

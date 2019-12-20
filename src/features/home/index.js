@@ -36,7 +36,9 @@ const HomeGUI = (props) => {
     const [modal, setModal] = useState({
         open: false,
         data: {
-            name: ''
+            basic: {
+                name:''
+            }
         }
     })
 
@@ -65,7 +67,8 @@ const HomeGUI = (props) => {
                     <Card
                         onClick={onCardClick}
                         key={`beer-card-${i}`}
-                        {...item}
+                        id={item.id}
+                        {...item.basic}
                     />
                 ))}
                 {<BeerCardModal

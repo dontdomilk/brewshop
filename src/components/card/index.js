@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-const Card = ({name, firstBrewed, description, imageUrl, foodPairing, id, onClick}) => {
+const Card = ({name, firstBrewed, description, imageUrl, foodPairing, id, onClick, tagline}) => {
 
     const handleClick = () => onClick(id);
 
@@ -13,7 +13,7 @@ const Card = ({name, firstBrewed, description, imageUrl, foodPairing, id, onClic
             <div className="text-wrapper">
                 <div className="name">{name}</div>
                 <div className="date">{firstBrewed}</div>
-                <p className="description">{description}</p>
+                <p className="tagline">{tagline}</p>
                 <div className="pairing">{foodPairing}</div>
             </div>
         </div>
